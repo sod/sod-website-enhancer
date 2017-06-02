@@ -1,0 +1,26 @@
+{
+  "name": "sod-website-enhancer",
+  "version": "1.0.0",
+  "manifest_version": 2,
+  "description": "Improve Github PullRequest overview page",
+  "homepage_url": "http://www.vonweiss.de",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "default_locale": "en",
+  "permissions": [
+    "https://github.com/"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://github.com/*"
+      ],
+      "js": [
+        "src/inject/github/inject.js"
+      ]
+    }
+  ]
+}
